@@ -1,376 +1,441 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shastika Global | Premium Cavendish Banana</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        * {
-    font-family: 'Cinzel', serif;
+<title>Global Air Tech | Premium Nendran Banana</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+
+*{font-family:'Cinzel',serif;}
+
+.glass-shell-stage{
+width:100%!important;
+max-width:450px!important;
+height:615px!important;
+margin-left:-10px!important;
+background:rgba(168,207,230,0.45);
+border-radius:60% 40% 50% 50% / 40% 40% 60% 60%;
+display:flex;
+align-items:center;
+justify-content:center;
+position:relative;
+overflow:visible!important;
+backdrop-filter:blur(40px);
+-webkit-backdrop-filter:blur(40px);
+border:1.5px solid rgba(255,255,255,0.3);
 }
 
-        body { 
-            <body style="background:url('{{ url_for('static', filename='images/background.webp') }}') no-repeat center center fixed; background-size:cover;"> 
-            no-repeat center center fixed; 
-            background-size: cover; 
-            background-color: #001f3f; 
-        }
-
-        /* 1. GLASS STAGE - PRESERVED MIRROR DESIGN */
-        .glass-shell-stage { 
-            width: 100% !important;
-            max-width: 450px !important; 
-            height: 615px !important;    
-            margin-left: -10px !important; 
-            background: rgba(168, 207, 230, 0.45); 
-            border-radius: 60% 40% 50% 50% / 40% 40% 60% 60%;
-            display: flex;
-            align-items:center;
-            justify-content: center;
-            position: relative;
-            overflow: visible !important; 
-            backdrop-filter: blur(40px);
-            -webkit-backdrop-filter: blur(40px);
-            border: 1.5px solid rgba(255, 255, 255, 0.3);
-        }
-
-        /* 2. PRODUCT IMAGE POSITION PRESERVED */
-        .product-seated {
-            padding-bottom: 0px !important; 
-            margin-bottom: -100px !important; 
-            transform: translateX(0px); 
-            width: 90% !important; 
-            transition: all 0.6s ease;
-        }
-
-        .glass-shell-stage:hover .product-seated {
-            transform: translateY(-20px) scale(1.05);
-        }
-
-        /* 3. TRANSPARENT GLASS FORM DESIGN */
-        .glass-form-card { 
-            background: rgba(255, 255, 255, 0.08); 
-            backdrop-filter: blur(25px);
-            -webkit-backdrop-filter: blur(25px);
-            border-radius: 24px;
-            box-shadow: 0 25px 50px rgba(0,0,0,0.3);
-            border: 1px solid rgba(255, 255, 255, 0.15);
-        }
-
-        .custom-input {
-            background-color: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 12px;
-            padding: 12px 16px;
-            color: #ffffff;
-            width: 100%;
-            outline: none;
-            font-size: 0.9rem;
-            transition: all 0.3s ease;
-        }
-select.custom-input option {
-    background-color: rgba(20, 20, 20, 0.9);
-    color: #ffffff;
+.product-seated{
+padding-bottom:0px!important;
+margin-bottom:-30px!important;
+transform:translateX(0px);
+width:90%!important;
+transition:all .6s ease;
 }
 
-select.custom-input option:checked {
-    background-color: rgba(255, 255, 255, 0.15);
+.glass-shell-stage:hover .product-seated{
+transform:translateY(-20px) scale(1.05);
 }
 
+.glass-form-card{
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(25px);
+-webkit-backdrop-filter:blur(25px);
+border-radius:24px;
+box-shadow:0 25px 50px rgba(0,0,0,.3);
+border:1px solid rgba(255,255,255,.15);
+}
 
-        .custom-input:focus { border-color: #4CAF50; background-color: rgba(255, 255, 255, 0.1); }
+.custom-input{
+background-color:rgba(255,255,255,.05);
+border:1px solid rgba(255,255,255,.1);
+border-radius:12px;
+padding:12px 16px;
+color:#fff;
+width:100%;
+outline:none;
+font-size:.9rem;
+transition:.3s;
+}
 
-        /* 4. CONTENT HIGHLIGHTS */
-        .highlight-card {
-            background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0) 100%);
-            border-bottom: 1px solid rgba(74, 222, 128, 0.2);
-            padding: 1.5rem;
-            transition: 0.3s;
-        }
-        .highlight-card:hover { background: rgba(255,255,255,0.08); transform: translateY(-5px); }
+select.custom-input option{
+background-color:rgba(20,20,20,.9);
+color:#fff;
+}
 
-        @keyframes float { 
-            0%, 100% { transform: translateY(0); } 
-            50% { transform: translateY(-15px); } 
-        }
-        .animate-float { animation: float 5s ease-in-out infinite; }
+.custom-input:focus{
+border-color:#4CAF50;
+background-color:rgba(255,255,255,.1);
+}
 
-        .badge-anchor {
-            position: absolute;
-            top: -25px;
-            right: -25px;
-            z-index: 50;
-        }
-        
-    </style>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+.highlight-card{
+background:linear-gradient(135deg,rgba(255,255,255,.05) 0%,rgba(255,255,255,0) 100%);
+border-bottom:1px solid rgba(74,222,128,.2);
+padding:1.5rem;
+transition:.3s;
+}
+
+.highlight-card:hover{
+background:rgba(255,255,255,.08);
+transform:translateY(-5px);
+}
+
+@keyframes float{
+0%,100%{transform:translateY(0)}
+50%{transform:translateY(-15px)}
+}
+
+.animate-float{animation:float 5s ease-in-out infinite;}
+
+.badge-anchor{
+position:absolute;
+top:-25px;
+right:-25px;
+z-index:1000;
+}
+
+@keyframes spin{
+from{transform:rotate(0)}
+to{transform:rotate(360deg)}
+}
+
+.logo-spin{animation:spin 8s linear infinite;}
+.badge-spin{animation:spin 20s linear infinite;}
+
+/* Back Button Styles */
+.back-btn {
+position: fixed;
+top: 80px;
+left: 24px;
+z-index: 999;
+background: linear-gradient(to right, #16a34a, #22c55e);
+padding: 12px 24px;
+border-radius: 999px;
+color: #fff;
+font-weight: bold;
+display: flex;
+align-items: center;
+gap: 12px;
+text-decoration: none;
+box-shadow: 0 10px 15px -3px rgba(0,0,0,0.3);
+transition: all 0.3s ease;
+font-family: 'Cinzel', serif;
+}
+
+.back-btn:hover {
+transform: translateX(-4px);
+}
+
+main {
+margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+.back-btn {
+top: 70px;
+padding: 10px 16px;
+font-size: 0.85rem;
+}
+}
+@media (max-width: 768px) {
+    .nav-links {
+        display: none !important;
+    }
+    .nav-links.active {
+        display: flex !important;
+        flex-direction: column;
+        position: fixed;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.95);
+        padding: 1rem 0;
+        z-index: 99999;
+        align-items: center;
+        gap: 10px;
+    }
+}
+</style>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+
 </head>
+
 <body class="inner-page">
+
 <nav class="navbar">
-    <a href="#" class="logo-container">
-        <img src="{{ url_for('static', filename='images/logo.webp') }}"loading="lazy">
-        <span>SHASTIKA</span>
-    </a>
-    <div class="menu-toggle" aria-label="Open Menu">☰</div>
-    <div class="nav-links">
-        <a href="/home">HOME</a>
-        <div class="nav-dropdown">
- <a href="#" class="dropbtn">PRODUCTS ▾</a>
-  <div class="dropdown-menu">
-    <a href="/product/tendercoconut">Tender Coconut</a>
-    <a href="/product/greencoconut">Green Coconut</a>
-    <a href="/product/huskedcoconut">Husked Coconut</a>
-    <a href="/product/semihuskedcoconut">Semi-Husked Coconut</a>
-    <a href="/product/dehusked">Dehusked Coconut</a>
-    <a href="/product/freshorganic">Fresh Organic Coconut</a>
-    <a href="/product/tomato">Tomato</a>
-    <a href="/product/watermelon">Watermelon</a>
-    <a href="/product/blackwatermelon">Black Diamond Watermelon</a>
-    <a href="/product/yellowpumpkin">Yellow Pumpkin</a>
-    <a href="/product/whitepumpkin">White Pumpkin</a>
-    <a href="/product/yellowcucumber">Yellow Cucumber</a>
-    <a href="/product/banana">Cavendish Banana</a>
-    <a href="/product/babybanana">Baby Banana</a>
-    <a href="/product/nendranbanana">Nendran Banana</a>
-    <a href="/product/redbanana">Red Banana</a>
-  </div>
+
+<a href="#" class="logo-container">
+<img src="{{ url_for('static', filename='images/Global_logo.webp') }}">
+</a>
+
+<div class="menu-toggle">☰</div>
+
+<div class="nav-links">
+
+<a href="/home">HOME</a>
+
+<div class="nav-dropdown">
+
+<a href="#" class="dropbtn">PRODUCTS ▾</a>
+
+<div class="dropdown-menu">
+
+<a href="/product/tendercoconut">Tender Coconut</a>
+<a href="/product/greencoconut">Green Coconut</a>
+<a href="/product/huskedcoconut">Husked Coconut</a>
+<a href="/product/semihuskedcoconut">Semi-Husked Coconut</a>
+<a href="/product/dehusked">Dehusked Coconut</a>
+<a href="/product/freshorganic">Fresh Organic Coconut</a>
+<a href="/product/tomato">Tomato</a>
+<a href="/product/watermelon">Watermelon</a>
+<a href="/product/blackwatermelon">Black Diamond Watermelon</a>
+<a href="/product/yellowpumpkin">Yellow Pumpkin</a>
+<a href="/product/whitepumpkin">White Pumpkin</a>
+<a href="/product/yellowcucumber">Yellow Cucumber</a>
+<a href="/product/banana">Cavendish Banana</a>
+<a href="/product/babybanana">Baby Banana</a>
+<a href="/product/nendranbanana">Nendran Banana</a>
+<a href="/product/redbanana">Red Banana</a>
+
+</div>
 </div>
 
-        <a href="/countries">COUNTRIES</a>
-        <a href="/awards">AWARDS</a>
-        <a href="/objectives">OBJECTIVES</a>
-        <a href="/team">OUR TEAM</a>
-        <a href="/contact">CONTACT US</a>
-        <a href="/gallery">GALLERY</a>
+<a href="/countries">COUNTRIES</a>
+<a href="/awards">AWARDS</a>
+<a href="/objectives">OBJECTIVES</a>
+<a href="/team">OUR TEAM</a>
+<a href="/contact">CONTACT US</a>
+<a href="/gallery">GALLERY</a>
 
-    </div>
-  </nav>
-    <nav class="p-6 max-w-7xl mx-auto flex justify-between items-center relative z-50">
-        <div class="text-2xl font-black tracking-tighter uppercase">
-             <span class="font-light text-green-300 italic"></span>
-        </div>
-    </nav>
+</div>
+</nav>
 
-    <main class="max-w-7xl mx-auto px-6 py-12">
-        <div class="flex flex-col lg:flex-row items-start gap-16 lg:gap-24">
-            
-            <div class="w-full lg:w-5/12 relative flex flex-col items-start">
-                <div class="glass-shell-stage group mb-12">
-                    <img src="{{ url_for('static', filename='images/nendranbanana-pd.webp') }}"  alt="Cavendish Banana" class="product-seated animate-float z-10 drop-shadow-[0_25px_25px_rgba(0,0,0,0.6)]">
-                    <div class="badge-anchor">
-                        <div class="relative w-40 h-40 flex items-center justify-center">
-                            <svg viewBox="0 0 100 100" class="absolute inset-0 w-full h-full animate-[spin_20s_linear_infinite]">
-                                <path id="badgePath" d="M 50, 50 m -35, 0 a 35,35 0 1,1 70,0 a 35,35 0 1,1 -70,0" fill="transparent"/>
-                                <text class="fill-white font-bold uppercase tracking-[0.2em] text-[8px]">
-                                    <textPath xlink:href="#badgePath">SHASTIKA GLOBAL IMPEX PRIVATE LTD • </textPath>
-                                </text>
-                            </svg>
-                            <div class="w-24 h-24 bg-white rounded-full flex items-center justify-center p-3 shadow-2xl z-10">
-                                <div class="w-full h-full animate-[spin_8s_linear_infinite]">
-                                    <img src="{{ url_for('static', filename='images/logo.webp') }}" class="w-full h-full object-contain scale-110" alt="Logo">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+<!-- BACK BUTTON -->
+<a href="/home" class="back-btn">
+<span>← Back</span>
+</a>
 
-                <div class="w-full glass-form-card p-8 relative">
-                    <h2 class="text-xl font-bold text-green-400 uppercase tracking-widest mb-6">Bulk Quote Inquiry</h2>
-                    <form class="space-y-4" onsubmit="submitEnquiryForm(event)">
-                        <input type="hidden" name="product" value="Nendran Banana">
+<main class="max-w-7xl mx-auto px-6 py-12">
 
-    <input type="text" name="full_name" placeholder="Full Name *(required)" class="custom-input" required>
-    
-    <select id="countrySelect" name="country" class="custom-input" required>
-    <option value="">Select Country *</option>
+<div class="flex flex-col lg:flex-row items-start gap-16 lg:gap-24">
+
+<!-- LEFT -->
+
+<div class="w-full lg:w-5/12 relative flex flex-col items-start">
+
+<div class="glass-shell-stage group mb-12">
+
+<img src="{{ url_for('static', filename='images/nendranbanana-pd.webp') }}"
+alt="Nendran Banana"
+class="product-seated animate-float z-10 drop-shadow-[0_25px_25px_rgba(0,0,0,0.6)]">
+
+<div class="badge-anchor">
+
+<div class="relative w-40 h-40 flex items-center justify-center">
+
+<svg viewBox="0 0 100 100" class="absolute inset-0 w-full h-full badge-spin">
+
+<path id="badgePath"
+d="M 50, 50 m -35, 0 a 35,35 0 1,1 70,0 a 35,35 0 1,1 -70,0"
+fill="transparent"/>
+
+<text class="fill-white font-bold uppercase tracking-[0.2em] text-[8px]">
+<textPath xlink:href="#badgePath">
+GLOBAL AIR TECH EXPORTS •
+</textPath>
+</text>
+
+</svg>
+
+<div class="w-24 h-24 bg-white rounded-full flex items-center justify-center p-3 shadow-2xl z-10">
+
+<div class="w-full h-full logo-spin">
+
+<img src="{{ url_for('static', filename='images/Global_logo.webp') }}"
+class="w-full h-full object-contain scale-110">
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="w-full glass-form-card p-8">
+
+<h2 class="text-xl font-bold text-green-400 uppercase tracking-widest mb-6">
+Bulk Quote Inquiry
+</h2>
+
+<form class="space-y-4" onsubmit="submitEnquiryForm(event)">
+
+<input type="hidden" name="product" value="Nendran Banana">
+
+<input type="text" name="name" placeholder="Full Name *(required)" class="custom-input" required>
+
+<select id="countrySelect" name="country" class="custom-input" required>
+<option value="">Select Country *</option>
 </select>
+
 <div class="flex gap-3">
-    <input type="text" id="countryCode" name="country_code" placeholder="+Code" class="custom-input w-28" readonly required>
-    <input type="tel" name="phone" placeholder="Phone Number *" class="custom-input flex-1" required>
+
+<input type="text" id="countryCode" name="country_code" placeholder="+Code" class="custom-input w-28" readonly required>
+
+<input type="tel" name="phone" placeholder="Phone Number *" class="custom-input flex-1" required>
+
 </div>
 
-    
-    <input type="email" name="email" placeholder="Email Address *" class="custom-input" required>
-    
-    <button type="submit"  class="w-full bg-gradient-to-r from-green-500 to-green-600 py-4 rounded-xl font-black uppercase tracking-widest hover:scale-[1.01] transition-transform text-white">
-        Send Enquiry
-    </button>
-</form>
-                </div>
-            </div>
+<input type="email" name="email" placeholder="Email Address *" class="custom-input" required>
 
-            <div class="w-full lg:w-7/12 space-y-12">
-                <div class="space-y-4">
-                    <span class="text-green-400 font-bold tracking-[0.5em] text-[10px] uppercase block underline decoration-green-500/30 underline-offset-8">Export Quality Standards</span>
-                    <h1 class="text-7xl lg:text-9xl font-black uppercase leading-[0.8] tracking-tighter">
-                    nendran <br> <span class="text-green-300 italic font-serif text-6xl lg:text-8xl">Banana</span>
-                    </h1>
-                    <p class="max-w-2xl text-sm md:text-base leading-relaxed text-white">
-   <b>Nourished by the perennial waters of the Bhavani River, our Nendran bananas are the pinnacle of Southern Indian agriculture. Cultivated in the fertile plains of Gobichettipalayam, these "Golden Bananas" are distinguished by their large size, thick skin, and distinct angular shape. Whether used for gourmet cooking, making the world-famous "Nendran Chips," or eaten ripe for its high probiotic value, our Gobi-grown Nendran is the preferred choice for the European and Middle Eastern markets. </b>
+<button type="submit"
+class="w-full bg-gradient-to-r from-green-500 to-green-600 py-4 rounded-xl font-black uppercase tracking-widest">
+Send Enquiry
+</button>
+
+</form>
+</div>
+</div>
+
+
+<!-- RIGHT -->
+
+<div class="w-full lg:w-7/12 space-y-12">
+
+<div class="space-y-4">
+
+<span class="text-green-400 font-bold tracking-[0.5em] text-[10px] uppercase block underline decoration-green-500/30 underline-offset-8">
+Export Quality Standards
+</span>
+
+<h1 class="text-7xl lg:text-9xl font-black uppercase leading-[0.8] tracking-tighter">
+
+nendran <br>
+
+<span class="text-green-300 italic font-serif text-6xl lg:text-8xl">
+Banana
+</span>
+
+</h1>
+
+<p class="max-w-2xl text-sm md:text-base leading-relaxed text-white">
+
+<b>
+Nourished by the perennial waters of the Bhavani River, our Nendran bananas are the pinnacle of Southern Indian agriculture. Cultivated in the fertile plains of Gobichettipalayam, these Golden Bananas are distinguished by their large size, thick skin, and distinct angular shape. Whether used for gourmet cooking or eaten ripe, they are highly preferred in European and Middle Eastern markets.
+</b>
+
 </p>
 
+</div>
 
-                </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div class="highlight-card">
-                        <h4 class="text-green-400 font-bold text-xs uppercase tracking-tighter mb-2">Purity & Source: Ethically Grown & Traceable</h4>
-                        <ul class="text-sm space-y-2 text-blue-100/70">
-                            <li class="text-white"><b> Sourced from the Bhavani-LBP canal region. We follow "Good Agricultural Practices" (GAP) to ensure the fruits are free from chemical residues. Our Nendran is known for its high dry-matter content, making it superior for processing.</b></li>
-                        </ul>
-                    </div>
-                    <div class="highlight-card">
-                        <h4 class="text-green-400 font-bold text-xs uppercase tracking-tighter mb-2">Quality & Grade: Grade ‘A’ Export Quality</h4>
-                        <ul class="text-sm space-y-2 text-blue-100/70">
-                            <li class="text-white">Length: <b>  20 cm – 25 cm+ per finger.</b></li>
-                            <li class="text-white">Shape: <b> Characteristically long, slightly curved.</b></li>
-                            <li class="text-white">Texture:<b> Firm and starchy when green; soft and honey-sweet when fully ripe.</b></li>
-                        </ul>
-                    </div>
-                    <div class="highlight-card">
-                        <h4 class="text-green-400 font-bold text-xs uppercase tracking-tighter mb-2">Packaging Detail</h4>
-                        <ul class="text-sm space-y-2 text-blue-100/70">
-                            <li class="text-white">Net Weight:<b> 2kg ,5kg ,8kg,15kg Carton</b></li>
-                            <li class="text-white">Hand Arrangement:<b>Packed in "u-shape" or "row" patterns to prevent neck-breaking.</b></li>
-                            <li class="text-white">Box:<b> 5-ply Bottom / 3-ply Top Strong Carton</b></li>
-                        </ul>
-                    </div>
-                    <div class="highlight-card">
-                        <h4 class="text-green-400 font-bold text-xs uppercase tracking-tighter mb-2">State of Origin: Gobi, Tamil Nadu (India)</h4>
-                        <ul class="text-sm space-y-2 text-blue-100/70">
-                            <li class="text-white"><b> The Red Loamy Soil of the Erode district gives our Nendran a unique nutritional profile, specifically higher levels of Vitamin A and Potassium compared to those grown in sandy soils.</b></li>
-                        </ul>
-                    </div>
-                </div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
-                <div class="bg-white/5 p-8 rounded-3xl border border-white/10 flex flex-col md:flex-row gap-8 justify-between items-center">
-                    <div class="text-center md:text-left">
-                        <p class="text-4xl font-black text-green-300 italic">13.5°C</p>
-                        <p class="text-[10px] uppercase tracking-[0.4em] opacity-40">Precision Reefer Cooling</p>
-                    </div>
-                    <div class="h-px w-full md:h-12 md:w-px bg-white/10"></div>
-                    <div class="text-center md:text-left">
-                        <p class="text-4xl font-black text-white italic">40'Ft</p>
-                        <p class="text-[10px] uppercase tracking-[0.4em] opacity-40">Standard Reefer Loading</p>
-                    </div>
-                    <div class="h-px w-full md:h-12 md:w-px bg-white/10"></div>
-                    <div class="flex gap-4">
-                        <div class="w-14 h-14 rounded-full border border-green-500/50 flex items-center justify-center text-[10px] font-bold text-green-400">5-PLY</div>
-                        <div class="w-14 h-14 rounded-full border border-white/20 flex items-center justify-center text-[10px] font-bold opacity-40">ISO</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </main>
-    <script>
-const countries = {
-  "Afghanistan": "+93",
-  "Albania": "+355",
-  "Algeria": "+213",
-  "Argentina": "+54",
-  "Australia": "+61",
-  "Austria": "+43",
-  "Bangladesh": "+880",
-  "Belgium": "+32",
-  "Brazil": "+55",
-  "Canada": "+1",
-  "China": "+86",
-  "Denmark": "+45",
-  "Egypt": "+20",
-  "Finland": "+358",
-  "France": "+33",
-  "Germany": "+49",
-  "Greece": "+30",
-  "Hong Kong": "+852",
-  "India": "+91",
-  "Indonesia": "+62",
-  "Ireland": "+353",
-  "Israel": "+972",
-  "Italy": "+39",
-  "Japan": "+81",
-  "Kenya": "+254",
-  "Kuwait": "+965",
-  "Malaysia": "+60",
-  "Maldives": "+960",
-  "Mexico": "+52",
-  "Netherlands": "+31",
-  "New Zealand": "+64",
-  "Nigeria": "+234",
-  "Norway": "+47",
-  "Oman": "+968",
-  "Pakistan": "+92",
-  "Philippines": "+63",
-  "Poland": "+48",
-  "Portugal": "+351",
-  "Qatar": "+974",
-  "Russia": "+7",
-  "Saudi Arabia": "+966",
-  "Singapore": "+65",
-  "South Africa": "+27",
-  "South Korea": "+82",
-  "Spain": "+34",
-  "Sri Lanka": "+94",
-  "Sweden": "+46",
-  "Switzerland": "+41",
-  "Thailand": "+66",
-  "Turkey": "+90",
-  "UAE": "+971",
-  "UK": "+44",
-  "USA": "+1",
-  "Vietnam": "+84"
-};
+<div class="highlight-card">
 
-const countrySelect = document.getElementById("countrySelect");
-const countryCodeInput = document.getElementById("countryCode");
+<h4 class="text-green-400 font-bold text-xs uppercase mb-2">
+Purity & Source
+</h4>
 
-/* Populate dropdown */
-Object.keys(countries).forEach(country => {
-    const option = document.createElement("option");
-    option.value = country;
-    option.textContent = country;
-    countrySelect.appendChild(option);
-});
+<ul class="text-sm space-y-2">
 
-/* Auto-fill country code */
-countrySelect.addEventListener("change", function () {
-    countryCodeInput.value = countries[this.value] || "";
-});
-/* ================= PRODUCT ENQUIRY SUBMIT ================= */
-function submitEnquiryForm(e){
-  e.preventDefault();
+<li class="text-white">
+<b>
+Sourced from the Bhavani canal region and grown using Good Agricultural Practices.
+</b>
+</li>
 
-  const form = e.target;
+</ul>
+</div>
 
-  fetch("/submit_enquiry", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      product: form.querySelector('input[name="product"]').value,
-      name: form.querySelector('input[name="name"]').value,
-      country: form.querySelector('select[name="country"]').value,
-      phone: form.querySelector('input[name="country_code"]').value + " " +
-             form.querySelector('input[name="phone"]').value,
-      email: form.querySelector('input[name="email"]').value
-    })
-  })
-  .then(res => res.json())
-  .then(data => {
-    if(data.status === "success"){
-      alert("Your enquiry has been sent successfully!");
-      form.reset();
-      document.getElementById("countryCode").value = "";
-    } else {
-      alert("Something went wrong!");
-    }
-  })
-  .catch(() => alert("Server error!"));
-}
+
+<div class="highlight-card">
+
+<h4 class="text-green-400 font-bold text-xs uppercase mb-2">
+Quality & Grade
+</h4>
+
+<ul class="text-sm space-y-2">
+
+<li class="text-white">Length: <b>20–25cm+</b></li>
+<li class="text-white">Shape: <b>Long & Slightly Curved</b></li>
+<li class="text-white">Texture: <b>Firm when green, sweet when ripe</b></li>
+
+</ul>
+</div>
+
+
+<div class="highlight-card">
+
+<h4 class="text-green-400 font-bold text-xs uppercase mb-2">
+Packaging Detail
+</h4>
+
+<ul class="text-sm space-y-2">
+
+<li class="text-white">Net Weight: <b>2kg / 5kg / 8kg / 15kg</b></li>
+<li class="text-white">Arrangement: <b>U-Shape Packing</b></li>
+<li class="text-white">Carton: <b>5-Ply Export Box</b></li>
+
+</ul>
+</div>
+
+
+<div class="highlight-card">
+
+<h4 class="text-green-400 font-bold text-xs uppercase mb-2">
+Origin
+</h4>
+
+<ul class="text-sm space-y-2">
+
+<li class="text-white">
+<b>Gobichettipalayam – Tamil Nadu, India</b>
+</li>
+
+</ul>
+</div>
+
+</div>
+
+</div>
+</div>
+</main>
+
+
+<script>
+// All form functionality has been moved to /static/js/main.js
 </script>
 
 
-</body>
+<!-- FLOATING BUTTONS -->
+<div class="floating-icons">
+  <button type="button" onclick="openChatbot()" class="float-btn chat-btn" title="Chat with us">
+    <i class="fa-solid fa-robot"></i>
+  </button>
+  <a href="https://wa.me/917397612015" target="_blank" class="float-btn whatsapp-btn" title="WhatsApp us">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+</div>
+
+<!-- CHATBOT MODAL -->
+<div id="chatbot-modal">
+  <div class="chatbot-container">
+    <div class="chatbot-header">
+      <h3>Chat with us</h3>
+      <button type="button" onclick="closeChatbot()" class="chatbot-close" title="Close">�</button>
+    </div>
+    <div class="chatbot-body">
+      <iframe src="https://chatbot-e99e.onrender.com" title="Chatbot" loading="lazy"></iframe>
+    </div>
+  </div>
+</div>
+<script src="{{ url_for('static', filename='js/main.js') }}"></script></body>
 </html>

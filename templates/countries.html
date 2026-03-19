@@ -1,4 +1,4 @@
-<html>
+﻿<html>
 <head>
   <title>About</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
@@ -9,8 +9,7 @@
 
   <nav class="navbar">
     <a href="#" class="logo-container">
-        <img src="{{ url_for('static', filename='images/logo.webp') }}"loading="lazy">
-        <span>SHASTIKA</span>
+        <img src="{{ url_for('static', filename='images/Global_logo.webp') }}" loading="lazy">
     </a>
     <div class="menu-toggle" aria-label="Open Menu">☰</div>
     <div class="nav-links">
@@ -43,9 +42,9 @@
         <a href="/contact">CONTACT US</a>
          <a href="/gallery">GALLERY</a>
 
-
     </div>
   </nav>
+
 <section class="global-network show">
 
       <h1 class="glass-heading">Our Exporting Countries</h1>
@@ -65,9 +64,6 @@
   <circle class="origin" cx="1315" cy="480" r="10" />
 
   <!-- ROUTES -->
-  <!-- ROUTES (CONNECTED TO SOUTH INDIA ORIGIN) -->
-<!-- ROUTES (ADJUSTED TO DESTINATIONS) -->
-
 <!-- Mauritius -->
 <path class="route" d="M1315 480 Q1200 600 1210 650" />
 
@@ -89,9 +85,7 @@
 <!-- Australia -->
 <path class="route" d="M1315 480 Q1500 620 1550 700" />
 
-
-
- <!-- DESTINATIONS (STATIC WITH LABELS) -->
+ <!-- DESTINATIONS -->
 
 <!-- Mauritius -->
 <circle class="destination" cx="1210" cy="650" r="8" />
@@ -125,11 +119,12 @@
 
 </div>
     </section>
+
     <!-- FLOATING ACTION BUTTONS -->
 <div class="floating-icons">
 
   <!-- Chatbot -->
-  <a href="/chatbot" class="float-btn chat-btn" title="Chat with us">
+  <a href="https://chatbot-e99e.onrender.com" class="float-btn chat-btn" title="Chat with us">
     <i class="fa-solid fa-robot"></i>
   </a>
 

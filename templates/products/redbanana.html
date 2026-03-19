@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shastika Global | Premium Cavendish Banana</title>
+    <title>Global Air Tech | Premium Cavendish Banana</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -14,8 +14,7 @@
 }
 
         body { 
-            <body style="background:url('{{ url_for('static', filename='images/background.webp') }}') no-repeat center center fixed; background-size:cover;"> 
-            no-repeat center center fixed; 
+            background: url('{{ url_for('static', filename='images/background.webp') }}') no-repeat center center fixed; 
             background-size: cover; 
             background-color: #001f3f; 
         }
@@ -105,6 +104,24 @@ select.custom-input option:checked {
             right: -25px;
             z-index: 50;
         }
+        @media (max-width: 768px) {
+    .nav-links {
+        display: none !important;
+    }
+    .nav-links.active {
+        display: flex !important;
+        flex-direction: column;
+        position: fixed;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.95);
+        padding: 1rem 0;
+        z-index: 99999;
+        align-items: center;
+        gap: 10px;
+    }
+}
         
     </style>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
@@ -112,8 +129,8 @@ select.custom-input option:checked {
 <body class="inner-page">
 <nav class="navbar">
     <a href="#" class="logo-container">
-        <img src="{{ url_for('static', filename='images/logo.webp') }}"loading="lazy">
-        <span>SHASTIKA</span>
+  <img src="{{ url_for('static', filename='images/Global_logo.webp') }}">
+</a>
     </a>
     <div class="menu-toggle" aria-label="Open Menu">☰</div>
     <div class="nav-links">
@@ -149,8 +166,14 @@ select.custom-input option:checked {
 
     </div>
   </nav>
-    <nav class="p-6 max-w-7xl mx-auto flex justify-between items-center relative z-50">
-        <div class="text-2xl font-black tracking-tighter uppercase">
+
+<!-- BACK BUTTON -->
+<a href="/home" style="position: fixed; top: 80px; left: 24px; z-index: 9999; background: linear-gradient(to right, #16a34a, #22c55e); padding: 12px 24px; border-radius: 999px; color: white; font-weight: bold; display: flex; align-items: center; gap: 12px; text-decoration: none; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3); transition: all 0.3s ease;">
+    <i class="fas fa-chevron-left" style="font-size: 20px;"></i>
+    <span style="font-size: 18px;">Back</span>
+</a>
+
+    <main class="max-w-7xl mx-auto px-6 py-12">
              <span class="font-light text-green-300 italic"></span>
         </div>
     </nav>
@@ -166,12 +189,12 @@ select.custom-input option:checked {
                             <svg viewBox="0 0 100 100" class="absolute inset-0 w-full h-full animate-[spin_20s_linear_infinite]">
                                 <path id="badgePath" d="M 50, 50 m -35, 0 a 35,35 0 1,1 70,0 a 35,35 0 1,1 -70,0" fill="transparent"/>
                                 <text class="fill-white font-bold uppercase tracking-[0.2em] text-[8px]">
-                                    <textPath xlink:href="#badgePath">SHASTIKA GLOBAL IMPEX PRIVATE LTD • </textPath>
+                                    <textPath xlink:href="#badgePath">GLOBAL AIR TECH • </textPath>
                                 </text>
                             </svg>
                             <div class="w-24 h-24 bg-white rounded-full flex items-center justify-center p-3 shadow-2xl z-10">
                                 <div class="w-full h-full animate-[spin_8s_linear_infinite]">
-                                    <img src="{{ url_for('static', filename='images/logo.webp') }}" class="w-full h-full object-contain scale-110" alt="Logo">
+                                    <img src="{{ url_for('static', filename='images/Global_logo.webp') }}" class="w-full h-full object-contain scale-110" alt="Logo">
                                 </div>
                             </div>
                         </div>
@@ -268,7 +291,7 @@ select.custom-input option:checked {
 <div class="floating-icons">
 
   <!-- Chatbot -->
-  <a href="/chatbot" class="float-btn chat-btn" title="Chat with us">
+  <a href="https://chatbot-e99e.onrender.com" class="float-btn chat-btn" title="Chat with us">
     <i class="fa-solid fa-robot"></i>
   </a>
 

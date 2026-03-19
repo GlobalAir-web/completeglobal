@@ -1,52 +1,50 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
   <title>Photo Gallery</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body class="inner-page">
 
-
-<!-- NAVBAR (copy your navbar here) -->
+<!-- NAVBAR -->
 <nav class="navbar">
-    <a href="#" class="logo-container">
-        <img src="{{ url_for('static', filename='images/logo.webp') }}"loading="lazy">
-        <span>SHASTIKA</span>
-    </a>
-    <div class="menu-toggle" aria-label="Open Menu">☰</div>
-    <div class="nav-links">
-      <a href="/home">HOME</a>
-        <div class="nav-dropdown">
- <a href="#" class="dropbtn">PRODUCTS ▾</a>
-  <div class="dropdown-menu">
-    <a href="/product/tendercoconut">Tender Coconut</a>
-    <a href="/product/greencoconut">Green Coconut</a>
-    <a href="/product/huskedcoconut">Husked Coconut</a>
-    <a href="/product/semihuskedcoconut">Semi-Husked Coconut</a>
-    <a href="/product/dehusked">Dehusked Coconut</a>
-    <a href="/product/freshorganic">Fresh Organic Coconut</a>
-    <a href="/product/tomato">Tomato</a>
-    <a href="/product/watermelon">Watermelon</a>
-    <a href="/product/blackwatermelon">Black Diamond Watermelon</a>
-    <a href="/product/yellowpumpkin">Yellow Pumpkin</a>
-    <a href="/product/whitepumpkin">White Pumpkin</a>
-    <a href="/product/yellowcucumber">Yellow Cucumber</a>
-    <a href="/product/banana">Cavendish Banana</a>
-    <a href="/product/babybanana">Baby Banana</a>
-    <a href="/product/nendranbanana">Nendran Banana</a>
-    <a href="/product/redbanana">Red Banana</a>
-  </div>
-</div>
-
-        <a href="/countries">COUNTRIES</a>
-        <a href="/awards">AWARDS</a>
-        <a href="/team">OUR TEAM</a>
-        <a href="/contact">CONTACT US</a>
-        
-
+  <a href="#" class="logo-container">
+    <img src="{{ url_for('static', filename='images/Global_logo.webp') }}" loading="lazy">
+  </a>
+  <div class="menu-toggle" aria-label="Open Menu">☰</div>
+  <div class="nav-links">
+    <a href="/home">HOME</a>
+    <div class="nav-dropdown">
+      <a href="#" class="dropbtn">PRODUCTS ▾</a>
+      <div class="dropdown-menu">
+        <a href="/product/tendercoconut">Tender Coconut</a>
+        <a href="/product/greencoconut">Green Coconut</a>
+        <a href="/product/huskedcoconut">Husked Coconut</a>
+        <a href="/product/semihuskedcoconut">Semi-Husked Coconut</a>
+        <a href="/product/dehusked">Dehusked Coconut</a>
+        <a href="/product/freshorganic">Fresh Organic Coconut</a>
+        <a href="/product/tomato">Tomato</a>
+        <a href="/product/watermelon">Watermelon</a>
+        <a href="/product/blackwatermelon">Black Diamond Watermelon</a>
+        <a href="/product/yellowpumpkin">Yellow Pumpkin</a>
+        <a href="/product/whitepumpkin">White Pumpkin</a>
+        <a href="/product/yellowcucumber">Yellow Cucumber</a>
+        <a href="/product/banana">Cavendish Banana</a>
+        <a href="/product/babybanana">Baby Banana</a>
+        <a href="/product/nendranbanana">Nendran Banana</a>
+        <a href="/product/redbanana">Red Banana</a>
+      </div>
     </div>
-  </nav>
+    <a href="/countries">COUNTRIES</a>
+    <a href="/awards">AWARDS</a>
+    <a href="/team">OUR TEAM</a>
+    <a href="/contact">CONTACT US</a>
+  </div>
+</nav>
+
+<!-- GALLERY SECTION -->
 <section id="gallery" class="gallery-section">
 
   <div class="section-header">
@@ -56,7 +54,7 @@
   <div class="gallery-shell">
 
     <!-- LEFT BUTTON -->
-    <button class="gallery-btn left" onclick="moveGallery(-1)">‹</button>
+    <button class="gallery-btn left" onclick="moveGallery(-1)">&#8249;</button>
 
     <!-- VIEWPORT -->
     <div class="gallery-viewport">
@@ -68,45 +66,132 @@
         <img src="{{ url_for('static', filename='images/Photo_4.webp') }}" onclick="openGalleryModal(this)">
         <img src="{{ url_for('static', filename='images/Photo_5.webp') }}" onclick="openGalleryModal(this)">
         <img src="{{ url_for('static', filename='images/Photo_6.webp') }}" onclick="openGalleryModal(this)">
+        <img src="{{ url_for('static', filename='images/Photo_7.webp') }}" onclick="openGalleryModal(this)">
+        <img src="{{ url_for('static', filename='images/Photo_8.webp') }}" onclick="openGalleryModal(this)">
+        <img src="{{ url_for('static', filename='images/Photo_9.webp') }}" onclick="openGalleryModal(this)">
 
       </div>
     </div>
 
     <!-- RIGHT BUTTON -->
-    <button class="gallery-btn right" onclick="moveGallery(1)">›</button>
+    <button class="gallery-btn right" onclick="moveGallery(1)">&#8250;</button>
 
   </div>
 
 </section>
 
-<!-- FLOATING ACTION BUTTONS -->
-<div class="floating-icons">
+<!-- ===== GALLERY MODAL ===== -->
+<div id="galleryModal" onclick="handleModalClick(event)">
 
-  <!-- Chatbot -->
-  <a href="/chatbot" class="float-btn chat-btn" title="Chat with us">
+  <!-- Close -->
+  <span class="close" onclick="closeGallery()">&#10005;</span>
+
+  <!-- Prev / Next inside modal -->
+  <button class="modal-nav prev" onclick="event.stopPropagation(); modalNav(-1)">&#8249;</button>
+  <button class="modal-nav next" onclick="event.stopPropagation(); modalNav(1)">&#8250;</button>
+
+  <!-- Big image -->
+  <img id="galleryModalImg" src="" onclick="event.stopPropagation()">
+
+</div>
+
+<!-- FLOATING BUTTONS -->
+<div class="floating-icons">
+  <a href="https://chatbot-e99e.onrender.com" class="float-btn chat-btn" title="Chat with us">
     <i class="fa-solid fa-robot"></i>
   </a>
-
-  <!-- WhatsApp -->
   <a href="https://wa.me/917397612015" target="_blank" class="float-btn whatsapp-btn" title="WhatsApp us">
     <i class="fa-brands fa-whatsapp"></i>
   </a>
-
 </div>
 
 <script defer src="{{ url_for('static', filename='js/main.js') }}"></script>
 
-<div id="galleryModal">
+<script>
+  /* ============================================
+     GALLERY SLIDER
+  ============================================ */
+  let galleryIndex = 0;
 
-  <button class="gallery-back" onclick="closeGallery()">
-    <span class="arrow">←</span>
-    <span>Back to Gallery</span>
-  </button>
+  function moveGallery(dir) {
+    const slider   = document.getElementById('gallerySlider');
+    const viewport = document.querySelector('.gallery-viewport');
+    const imgs     = slider.querySelectorAll('img');
+    const isMobile = window.innerWidth <= 768;
+    const visible  = isMobile ? 1 : 2;
+    const maxIndex = imgs.length - visible;
 
-  <img id="galleryModalImg">
+    galleryIndex = Math.max(0, Math.min(galleryIndex + dir, maxIndex));
 
-</div>
-  <img id="galleryModalImg">
-</div>
+    const vpW = viewport.getBoundingClientRect().width;
+
+    /* Mobile: gap=0, each photo=vpW, step=vpW
+       Desktop: gap=20, each photo=(vpW-20)/2, step=(vpW-20)/2+20 */
+    const step = isMobile ? vpW : (vpW - 20) / 2 + 20;
+
+    slider.style.transform = `translateX(-${galleryIndex * step}px)`;
+  }
+
+  window.addEventListener('resize', () => {
+    galleryIndex = 0;
+    document.getElementById('gallerySlider').style.transform = 'translateX(0)';
+  });
+
+  /* ============================================
+     MODAL — open, navigate, close
+  ============================================ */
+  let modalImgs    = [];
+  let modalCurrent = 0;
+
+  function openGalleryModal(imgEl) {
+    // Collect all <img> inside slider
+    const allImgs = Array.from(document.querySelectorAll('#gallerySlider img'));
+    modalImgs    = allImgs.map(i => i.src);
+    modalCurrent = allImgs.indexOf(imgEl);
+
+    _showModal(modalCurrent);
+    document.getElementById('galleryModal').classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function _showModal(index) {
+    document.getElementById('galleryModalImg').src = modalImgs[index];
+    modalCurrent = index;
+  }
+
+  function modalNav(dir) {
+    const next = modalCurrent + dir;
+    if (next >= 0 && next < modalImgs.length) _showModal(next);
+  }
+
+  function closeGallery() {
+    document.getElementById('galleryModal').classList.remove('active');
+    document.getElementById('galleryModalImg').src = '';
+    document.body.style.overflow = '';
+  }
+
+  // Click dark backdrop → close
+  function handleModalClick(e) {
+    if (e.target.id === 'galleryModal') closeGallery();
+  }
+
+  // Keyboard: arrows + Escape
+  document.addEventListener('keydown', function(e) {
+    if (!document.getElementById('galleryModal').classList.contains('active')) return;
+    if (e.key === 'ArrowRight') modalNav(1);
+    if (e.key === 'ArrowLeft')  modalNav(-1);
+    if (e.key === 'Escape')     closeGallery();
+  });
+
+  /* ============================================
+     MOBILE MENU TOGGLE
+  ============================================ */
+  const toggle   = document.querySelector('.menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
+  if (toggle) {
+    toggle.addEventListener('click', () => navLinks.classList.toggle('active'));
+  }
+</script>
+
 </body>
 </html>

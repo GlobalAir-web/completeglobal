@@ -1,25 +1,23 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shastika Global | Premium Husked Coconut</title>
+    <title>Global Air Tech | Premium Fresh Organic Coconut</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
         <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
 <style>
      * {
     font-family: 'Cinzel', serif;
 }
         body { 
-            <body style="background:url('{{ url_for('static', filename='images/background.webp') }}') no-repeat center center fixed; background-size:cover;"> 
-            no-repeat center center fixed; 
+            background: url('{{ url_for('static', filename='images/background.webp') }}') no-repeat center center fixed; 
             background-size: cover; 
             background-color: #001f3f; 
         }
 
-        /* 1. GLASS STAGE - PRESERVED MIRROR DESIGN */
         .glass-shell-stage { 
             width: 100% !important;
             max-width: 450px !important; 
@@ -49,7 +47,6 @@
             transform: translateY(-20px) scale(1.05);
         }
 
-        /* 2. TRANSPARENT GLASS FORM DESIGN */
         .glass-form-card { 
             background: rgba(255, 255, 255, 0.08); 
             backdrop-filter: blur(25px);
@@ -72,18 +69,15 @@
         }
 
         select.custom-input option {
-    background-color: rgba(20, 20, 20, 0.9);
-    color: #ffffff;
-}
-
-select.custom-input option:checked {
-    background-color: rgba(255, 255, 255, 0.15);
-}
-
+            background-color: rgba(20, 20, 20, 0.9);
+            color: #ffffff;
+        }
+        select.custom-input option:checked {
+            background-color: rgba(255, 255, 255, 0.15);
+        }
 
         .custom-input:focus { border-color: #4CAF50; background-color: rgba(255, 255, 255, 0.1); }
 
-        /* 3. CONTENT HIGHLIGHTS */
         .highlight-card {
             background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0) 100%);
             border-bottom: 1px solid rgba(74, 222, 128, 0.2);
@@ -104,245 +98,221 @@ select.custom-input option:checked {
             right: -25px;
             z-index: 50;
         }
+
+        /* LOGO & BADGE SPIN */
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .logo-spin { animation: spin 8s linear infinite; }
+        .badge-spin { animation: spin 20s linear infinite; }
+    @media (max-width: 768px) {
+    .nav-links {
+        display: none !important;
+    }
+    .nav-links.active {
+        display: flex !important;
+        flex-direction: column;
+        position: fixed;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.95);
+        padding: 1rem 0;
+        z-index: 99999;
+        align-items: center;
+        gap: 10px;
+    }
+}
     </style>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
 </head>
 <body class="inner-page">
 <nav class="navbar">
     <a href="#" class="logo-container">
-        <img src="{{ url_for('static', filename='images/logo.webp') }}"loading="lazy">
-        <span>SHASTIKA</span>
+        <img src="{{ url_for('static', filename='images/Global_logo.webp') }}">
     </a>
     <div class="menu-toggle" aria-label="Open Menu">☰</div>
     <div class="nav-links">
         <a href="/home">HOME</a>
         <div class="nav-dropdown">
- <a href="#" class="dropbtn">PRODUCTS ▾</a>
-  <div class="dropdown-menu">
-    <a href="/product/tendercoconut">Tender Coconut</a>
-    <a href="/product/greencoconut">Green Coconut</a>
-    <a href="/product/huskedcoconut">Husked Coconut</a>
-    <a href="/product/semihuskedcoconut">Semi-Husked Coconut</a>
-    <a href="/product/dehusked">Dehusked Coconut</a>
-    <a href="/product/freshorganic">Fresh Organic Coconut</a>
-    <a href="/product/tomato">Tomato</a>
-    <a href="/product/watermelon">Watermelon</a>
-    <a href="/product/blackwatermelon">Black Diamond Watermelon</a>
-    <a href="/product/yellowpumpkin">Yellow Pumpkin</a>
-    <a href="/product/whitepumpkin">White Pumpkin</a>
-    <a href="/product/yellowcucumber">Yellow Cucumber</a>
-    <a href="/product/banana">Cavendish Banana</a>
-    <a href="/product/babybanana">Baby Banana</a>
-    <a href="/product/nendranbanana">Nendran Banana</a>
-    <a href="/product/redbanana">Red Banana</a>
-  </div>
-</div>
-
+            <a href="#" class="dropbtn">PRODUCTS ▾</a>
+            <div class="dropdown-menu">
+                <a href="/product/tendercoconut">Tender Coconut</a>
+                <a href="/product/greencoconut">Green Coconut</a>
+                <a href="/product/huskedcoconut">Husked Coconut</a>
+                <a href="/product/semihuskedcoconut">Semi-Husked Coconut</a>
+                <a href="/product/dehusked">Dehusked Coconut</a>
+                <a href="/product/freshorganic">Fresh Organic Coconut</a>
+                <a href="/product/tomato">Tomato</a>
+                <a href="/product/watermelon">Watermelon</a>
+                <a href="/product/blackwatermelon">Black Diamond Watermelon</a>
+                <a href="/product/yellowpumpkin">Yellow Pumpkin</a>
+                <a href="/product/whitepumpkin">White Pumpkin</a>
+                <a href="/product/yellowcucumber">Yellow Cucumber</a>
+                <a href="/product/banana">Cavendish Banana</a>
+                <a href="/product/babybanana">Baby Banana</a>
+                <a href="/product/nendranbanana">Nendran Banana</a>
+                <a href="/product/redbanana">Red Banana</a>
+            </div>
+        </div>
         <a href="/countries">COUNTRIES</a>
         <a href="/awards">AWARDS</a>
         <a href="/objectives">OBJECTIVES</a>
         <a href="/team">OUR TEAM</a>
         <a href="/contact">CONTACT US</a>
         <a href="/gallery">GALLERY</a>
-
     </div>
-  </nav>
-    <nav class="p-6 max-w-7xl mx-auto flex justify-between items-center relative z-50">
-        <div class="text-2xl font-black tracking-tighter uppercase">
-             <span class="font-light text-green-300 italic"></span>
-        </div>
-    </nav>
+</nav>
 
-    <main class="max-w-7xl mx-auto px-6 py-12">
-        <div class="flex flex-col lg:flex-row items-start gap-16 lg:gap-24">
-            
-            <div class="w-full lg:w-5/12 relative flex flex-col items-start">
-                <div class="glass-shell-stage group mb-12">
-                    <img src="{{ url_for('static', filename='images/freshorganic-pd.webp') }}"  alt="Husked Coconut" class="product-seated animate-float z-10 drop-shadow-[0_25px_25px_rgba(0,0,0,0.6)]">
-                    <div class="badge-anchor">
-                        <div class="relative w-40 h-40 flex items-center justify-center">
-                            <svg viewBox="0 0 100 100" class="absolute inset-0 w-full h-full animate-[spin_20s_linear_infinite]">
-                                <path id="badgePath" d="M 50, 50 m -35, 0 a 35,35 0 1,1 70,0 a 35,35 0 1,1 -70,0" fill="transparent"/>
-                                <text class="fill-white font-bold uppercase tracking-[0.2em] text-[8px]">
-                                    <textPath xlink:href="#badgePath">SHASTIKA GLOBAL IMPEX PRIVATE LTD • </textPath>
-                                </text>
-                            </svg>
-                            <div class="w-24 h-24 bg-white rounded-full flex items-center justify-center p-3 shadow-2xl z-10">
-                                <div class="w-full h-full animate-[spin_8s_linear_infinite]">
-                                    <img src="{{ url_for('static', filename='images/logo.webp') }}" class="w-full h-full object-contain scale-110" alt="Logo">
-                                </div>
+<!-- BACK BUTTON -->
+<a href="/home" style="position: fixed; top: 24px; left: 24px; z-index: 9999; background: linear-gradient(to right, #16a34a, #22c55e); padding: 12px 24px; border-radius: 999px; color: white; font-weight: bold; display: flex; align-items: center; gap: 12px; text-decoration: none; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3); transition: all 0.3s ease;">
+    <i class="fas fa-chevron-left" style="font-size: 20px;"></i>
+    <span style="font-size: 18px;">Back</span>
+</a>
+
+<main class="max-w-7xl mx-auto px-6 py-12">
+    <div class="flex flex-col lg:flex-row items-start gap-16 lg:gap-24">
+        
+        <div class="w-full lg:w-5/12 relative flex flex-col items-start">
+            <div class="glass-shell-stage group mb-12">
+                <img src="{{ url_for('static', filename='images/freshorganic-pd.webp') }}" alt="Fresh Organic Coconut" class="product-seated animate-float z-10 drop-shadow-[0_25px_25px_rgba(0,0,0,0.6)]">
+                <div class="badge-anchor">
+                    <div class="relative w-40 h-40 flex items-center justify-center">
+                        <svg viewBox="0 0 100 100" class="absolute inset-0 w-full h-full badge-spin">
+                            <path id="badgePath" d="M 50, 50 m -35, 0 a 35,35 0 1,1 70,0 a 35,35 0 1,1 -70,0" fill="transparent"/>
+                            <text class="fill-white font-bold uppercase tracking-[0.2em] text-[8px]">
+                                <textPath xlink:href="#badgePath">GLOBAL AIR TECH EXPORTS • </textPath>
+                            </text>
+                        </svg>
+                        <div class="w-24 h-24 bg-white rounded-full flex items-center justify-center p-3 shadow-2xl z-10">
+                            <div class="w-full h-full logo-spin">
+                                <img src="{{ url_for('static', filename='images/Global_logo.webp') }}" class="w-full h-full object-contain scale-110" alt="Logo">
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <div class="w-full glass-form-card p-8 relative">
-                    <h2 class="text-xl font-bold text-green-400 uppercase tracking-widest mb-6">Bulk Quote Inquiry</h2>
-                    <form class="space-y-4" onsubmit="submitEnquiryForm(event)">
-<input type="hidden" name="product" value="Fresh Organic Coconut">
+            <div class="w-full glass-form-card p-8 relative">
+                <h2 class="text-xl font-bold text-green-400 uppercase tracking-widest mb-6">Bulk Quote Inquiry</h2>
+                <form class="space-y-4" onsubmit="submitEnquiryForm(event)">
+                    <input type="hidden" name="product" value="Fresh Organic Coconut">
+                    <input type="text" name="name" placeholder="Full Name *(required)" class="custom-input">
+                    <select id="countrySelect" name="country" class="custom-input" required>
+                        <option value="">Select Country *</option>
+                    </select>
+                    <div class="flex gap-3">
+                        <input type="text" id="countryCode" name="country_code" placeholder="+Code" class="custom-input w-28" readonly required>
+                        <input type="tel" name="phone" placeholder="Phone Number *" class="custom-input flex-1" required>
+                    </div>
+                    <input type="email" name="email" placeholder="Email Address" class="custom-input">
+                    <button type="submit" class="w-full bg-gradient-to-r from-green-500 to-green-600 py-4 rounded-xl font-black uppercase tracking-widest">Send Enquiry</button>
+                </form>
+            </div>
+        </div>
 
-                        <input type="text" name="name" placeholder="Full Name *(required)" class="custom-input">
-                            <select id="countrySelect" name="country" class="custom-input" required>
-    <option value="">Select Country *</option>
-</select>
-<div class="flex gap-3">
-    <input type="text" id="countryCode" name="country_code" placeholder="+Code" class="custom-input w-28" readonly required>
-    <input type="tel" name="phone" placeholder="Phone Number *" class="custom-input flex-1" required>
-</div>
+        <div class="w-full lg:w-7/12 space-y-12">
+            <div class="space-y-4">
+                <span class="text-green-400 font-bold tracking-[0.5em] text-[10px] uppercase block underline decoration-green-500/30 underline-offset-8">Matured Export Grade</span>
+                <h1 class="text-7xl lg:text-9xl font-black uppercase leading-[0.8] tracking-tighter">
+                    Fresh Organic <br> <span class="text-green-300 italic font-serif text-6xl lg:text-8xl">Coconut</span>
+                </h1>
+                <p class="max-w-2xl text-sm md:text-base leading-relaxed text-white">
+                    <b>Global Air Tech's Fresh Organic Coconuts are sourced from certified organic farms and grown
+                    without synthetic fertilizers or chemicals, ensuring natural purity and superior taste.
+                    Harvested at full maturity and carefully graded, these coconuts retain optimal moisture,
+                    rich kernel quality, and extended shelf life, making them ideal for premium international
+                    markets seeking sustainably grown produce.</b>
+                </p>
+            </div>
 
-                        <input type="email" name="email" placeholder="Email Address" class="custom-input">
-                        <button type="submit"  class="w-full bg-gradient-to-r from-green-500 to-green-600 py-4 rounded-xl font-black uppercase tracking-widest">Send Enquiry</button>
-                    </form>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="highlight-card">
+                    <h4 class="text-green-400 font-bold text-xs uppercase tracking-tighter mb-2">Physical Specs</h4>
+                    <ul class="text-sm space-y-2 text-blue-100/70">
+                        <li class="text-white">• Colour: <b class="text-white">Brown (Well Matured)</b></li>
+                        <li class="text-white">• Weight: <b class="text-white">500gms to 600gms</b></li>
+                        <li class="text-white">• Size: <b class="text-white">14-15 Inches</b></li>
+                    </ul>
+                </div>
+                <div class="highlight-card">
+                    <h4 class="text-green-400 font-bold text-xs uppercase tracking-tighter mb-2">Internal Quality</h4>
+                    <ul class="text-sm space-y-2 text-blue-100/70">
+                        <li class="text-white">• Oil Content: <b class="text-white">60% to 63% Min</b></li>
+                        <li class="text-white">• Texture: <b class="text-white">Pure & Fine Texture</b></li>
+                        <li class="text-white">• Status: <b class="text-white">100% Fresh Selection</b></li>
+                    </ul>
+                </div>
+                <div class="highlight-card">
+                    <h4 class="text-green-400 font-bold text-xs uppercase tracking-tighter mb-2">Logistics</h4>
+                    <ul class="text-sm space-y-2 text-blue-100/70">
+                        <li class="text-white">• Packing: <b class="text-white">25 Pieces Per Bag</b></li>
+                        <li class="text-white">• Shelf Life: <b class="text-white">6 Months</b></li>
+                        <li class="text-white">• Safety: <b class="text-white">Tamper-Proof Packaging</b></li>
+                    </ul>
+                </div>
+                <div class="highlight-card">
+                    <h4 class="text-green-400 font-bold text-xs uppercase tracking-tighter mb-2">Application Areas</h4>
+                    <ul class="text-sm space-y-2 text-blue-100/70">
+                        <li class="text-white">• Industrial: <b class="text-white">Oil Factories</b></li>
+                        <li class="text-white">• Commercial: <b class="text-white">Hotels & Stores</b></li>
+                        <li class="text-white">• Domestic: <b class="text-white">Home Kitchens</b></li>
+                    </ul>
                 </div>
             </div>
 
-            <div class="w-full lg:w-7/12 space-y-12">
-                <div class="space-y-4">
-                    <span class="text-green-400 font-bold tracking-[0.5em] text-[10px] uppercase block underline decoration-green-500/30 underline-offset-8">Matured Export Grade</span>
-                    <h1 class="text-7xl lg:text-9xl font-black uppercase leading-[0.8] tracking-tighter">
-                        Fresh Organic <br> <span class="text-green-300 italic font-serif text-6xl lg:text-8xl">Coconut</span>
-                    </h1>
-                    <p class="max-w-2xl text-sm md:text-base leading-relaxed text-white">
-    <b>Shastika Global’s Fresh Organic Coconuts are sourced from certified organic farms and grown
-    without synthetic fertilizers or chemicals, ensuring natural purity and superior taste.
-    Harvested at full maturity and carefully graded, these coconuts retain optimal moisture,
-    rich kernel quality, and extended shelf life, making them ideal for premium international
-    markets seeking sustainably grown produce.</b>
-</p>
-
-
+            <div class="bg-white/5 p-8 rounded-3xl border border-white/10 flex flex-col md:flex-row gap-8 justify-between items-center">
+                <div class="text-center md:text-left">
+                    <p class="text-4xl font-black text-green-300 italic">63%</p>
+                    <p class="text-[10px] uppercase tracking-[0.4em] opacity-40">Min Oil Content</p>
                 </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div class="highlight-card">
-                        <h4 class="text-green-400 font-bold text-xs uppercase tracking-tighter mb-2">Physical Specs</h4>
-                        <ul class="text-sm space-y-2 text-blue-100/70">
-                            <li class="text-white">• Colour: <b class="text-white">Brown (Well Matured)</b></li>
-                            <li class="text-white">• Weight: <b class="text-white">500gms to 600gms</b></li>
-                            <li class="text-white">• Size: <b class="text-white">14-15 Inches</b></li>
-                        </ul>
-                    </div>
-                    <div class="highlight-card">
-                        <h4 class="text-green-400 font-bold text-xs uppercase tracking-tighter mb-2">Internal Quality</h4>
-                        <ul class="text-sm space-y-2 text-blue-100/70">
-                            <li class="text-white">• Oil Content: <b class="text-white">60% to 63% Min</b></li>
-                            <li class="text-white">• Texture: <b class="text-white">Pure & Fine Texture</b></li>
-                            <li class="text-white">• Status: <b class="text-white">100% Fresh Selection</b></li>
-                        </ul>
-                    </div>
-                    <div class="highlight-card">
-                        <h4 class="text-green-400 font-bold text-xs uppercase tracking-tighter mb-2">Logistics</h4>
-                        <ul class="text-sm space-y-2 text-blue-100/70">
-                            <li class="text-white">• Packing: <b class="text-white">25 Pieces Per Bag</b></li>
-                            <li class="text-white">• Shelf Life: <b class="text-white">6 Months</b></li>
-                            <li class="text-white">• Safety: <b class="text-white">Tamper-Proof Packaging</b></li>
-                        </ul>
-                    </div>
-                    <div class="highlight-card">
-                        <h4 class="text-green-400 font-bold text-xs uppercase tracking-tighter mb-2">Application Areas</h4>
-                        <ul class="text-sm space-y-2 text-blue-100/70">
-                            <li class="text-white">• Industrial:<b class="text-white"> Oil Factories</b></li>
-                            <li class="text-white">• Commercial:<b class="text-white"> Hotels & Stores</b></li>
-                            <li class="text-white">• Domestic:<b class="text-white">Home Kitchens</b></li>
-                        </ul>
-                    </div>
+                <div class="h-px w-full md:h-12 md:w-px bg-white/10"></div>
+                <div class="text-center md:text-left">
+                    <p class="text-4xl font-black text-white italic">6 Mo.</p>
+                    <p class="text-[10px] uppercase tracking-[0.4em] opacity-40">Extended Shelf Life</p>
                 </div>
-
-                <div class="bg-white/5 p-8 rounded-3xl border border-white/10 flex flex-col md:flex-row gap-8 justify-between items-center">
-                    <div class="text-center md:text-left">
-                        <p class="text-4xl font-black text-green-300 italic">63%</p>
-                        <p class="text-[10px] uppercase tracking-[0.4em] opacity-40">Min Oil Content</p>
-                    </div>
-                    <div class="h-px w-full md:h-12 md:w-px bg-white/10"></div>
-                    <div class="text-center md:text-left">
-                        <p class="text-4xl font-black text-white italic">6 Mo.</p>
-                        <p class="text-[10px] uppercase tracking-[0.4em] opacity-40">Extended Shelf Life</p>
-                    </div>
-                    <div class="h-px w-full md:h-12 md:w-px bg-white/10"></div>
-                    <div class="flex gap-4">
-                        <div class="w-14 h-14 rounded-full border border-green-500/50 flex items-center justify-center text-[10px] font-bold text-green-400 text-center">PURE</div>
-                        <div class="w-14 h-14 rounded-full border border-white/20 flex items-center justify-center text-[10px] font-bold opacity-40 text-center text-white">FRESH</div>
-                    </div>
+                <div class="h-px w-full md:h-12 md:w-px bg-white/10"></div>
+                <div class="flex gap-4">
+                    <div class="w-14 h-14 rounded-full border border-green-500/50 flex items-center justify-center text-[10px] font-bold text-green-400 text-center">PURE</div>
+                    <div class="w-14 h-14 rounded-full border border-white/20 flex items-center justify-center text-[10px] font-bold opacity-40 text-center text-white">FRESH</div>
                 </div>
             </div>
         </div>
-        <!-- FLOATING ACTION BUTTONS -->
-<div class="floating-icons">
+    </div>
 
-  <!-- Chatbot -->
-  <a href="/chatbot" class="float-btn chat-btn" title="Chat with us">
-    <i class="fa-solid fa-robot"></i>
-  </a>
+    <!-- FLOATING ACTION BUTTONS -->
+    <div class="floating-icons">
+        <a href="https://chatbot-e99e.onrender.com" class="float-btn chat-btn" title="Chat with us">
+            <i class="fa-solid fa-robot"></i>
+        </a>
+        <a href="https://wa.me/917397612015" target="_blank" class="float-btn whatsapp-btn" title="WhatsApp us">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+    </div>
+</main>
 
-  <!-- WhatsApp -->
-  <a href="https://wa.me/917397612015" target="_blank" class="float-btn whatsapp-btn" title="WhatsApp us">
-    <i class="fa-brands fa-whatsapp"></i>
-  </a>
-
-</div>
-    </main>
-     <script>
+<script>
 const countries = {
-  "Afghanistan": "+93",
-  "Albania": "+355",
-  "Algeria": "+213",
-  "Argentina": "+54",
-  "Australia": "+61",
-  "Austria": "+43",
-  "Bangladesh": "+880",
-  "Belgium": "+32",
-  "Brazil": "+55",
-  "Canada": "+1",
-  "China": "+86",
-  "Denmark": "+45",
-  "Egypt": "+20",
-  "Finland": "+358",
-  "France": "+33",
-  "Germany": "+49",
-  "Greece": "+30",
-  "Hong Kong": "+852",
-  "India": "+91",
-  "Indonesia": "+62",
-  "Ireland": "+353",
-  "Israel": "+972",
-  "Italy": "+39",
-  "Japan": "+81",
-  "Kenya": "+254",
-  "Kuwait": "+965",
-  "Malaysia": "+60",
-  "Maldives": "+960",
-  "Mexico": "+52",
-  "Netherlands": "+31",
-  "New Zealand": "+64",
-  "Nigeria": "+234",
-  "Norway": "+47",
-  "Oman": "+968",
-  "Pakistan": "+92",
-  "Philippines": "+63",
-  "Poland": "+48",
-  "Portugal": "+351",
-  "Qatar": "+974",
-  "Russia": "+7",
-  "Saudi Arabia": "+966",
-  "Singapore": "+65",
-  "South Africa": "+27",
-  "South Korea": "+82",
-  "Spain": "+34",
-  "Sri Lanka": "+94",
-  "Sweden": "+46",
-  "Switzerland": "+41",
-  "Thailand": "+66",
-  "Turkey": "+90",
-  "UAE": "+971",
-  "UK": "+44",
-  "USA": "+1",
-  "Vietnam": "+84"
+  "Afghanistan": "+93", "Albania": "+355", "Algeria": "+213", "Argentina": "+54",
+  "Australia": "+61", "Austria": "+43", "Bangladesh": "+880", "Belgium": "+32",
+  "Brazil": "+55", "Canada": "+1", "China": "+86", "Denmark": "+45",
+  "Egypt": "+20", "Finland": "+358", "France": "+33", "Germany": "+49",
+  "Greece": "+30", "Hong Kong": "+852", "India": "+91", "Indonesia": "+62",
+  "Ireland": "+353", "Israel": "+972", "Italy": "+39", "Japan": "+81",
+  "Kenya": "+254", "Kuwait": "+965", "Malaysia": "+60", "Maldives": "+960",
+  "Mexico": "+52", "Netherlands": "+31", "New Zealand": "+64", "Nigeria": "+234",
+  "Norway": "+47", "Oman": "+968", "Pakistan": "+92", "Philippines": "+63",
+  "Poland": "+48", "Portugal": "+351", "Qatar": "+974", "Russia": "+7",
+  "Saudi Arabia": "+966", "Singapore": "+65", "South Africa": "+27",
+  "South Korea": "+82", "Spain": "+34", "Sri Lanka": "+94", "Sweden": "+46",
+  "Switzerland": "+41", "Thailand": "+66", "Turkey": "+90", "UAE": "+971",
+  "UK": "+44", "USA": "+1", "Vietnam": "+84"
 };
 
 const countrySelect = document.getElementById("countrySelect");
 const countryCodeInput = document.getElementById("countryCode");
 
-/* Populate dropdown */
 Object.keys(countries).forEach(country => {
     const option = document.createElement("option");
     option.value = country;
@@ -350,16 +320,13 @@ Object.keys(countries).forEach(country => {
     countrySelect.appendChild(option);
 });
 
-/* Auto-fill country code */
 countrySelect.addEventListener("change", function () {
     countryCodeInput.value = countries[this.value] || "";
 });
-/* ================= PRODUCT ENQUIRY SUBMIT ================= */
+
 function submitEnquiryForm(e){
   e.preventDefault();
-
   const form = e.target;
-
   fetch("/submit_enquiry", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
@@ -384,7 +351,6 @@ function submitEnquiryForm(e){
   })
   .catch(() => alert("Server error!"));
 }
-
 </script>
 </body>
 </html>
