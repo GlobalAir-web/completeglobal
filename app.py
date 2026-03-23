@@ -22,7 +22,7 @@ app.secret_key = os.getenv("FLASK_SECRET_KEY", "SHASTIKA_ADMIN_PANEL_KEY_2025")
 
 MONGO_URI = os.getenv(
     "MONGO_URI",
-    "mongodb+srv://sreenethra681_db_user:<db_password>@cluster0.mcn0f6i.mongodb.net/?appName=Cluster0"
+    "mongodb+srv://itsolutions_db_user:S2pMMid2iJQ9MnZv@cluster0.mzaa2iz.mongodb.net/?appName=Cluster0"
 )
 
 DB_FILE = "shastika.db"
@@ -89,7 +89,7 @@ def connect_to_mongodb():
     """Initialize MongoDB connection"""
     global client, db, contact_collection, enquiry_collection, USE_MONGODB
     try:
-        client = MongoClient(MONGO_URI, serverSelectionTimeoutMS=5000)
+        client = MongoClient(MONGO_URI, serverSelectionTimeoutMS=5001)
         # Verify connection
         client.admin.command('ping')
         db = client["shastikaDB"]
@@ -389,4 +389,5 @@ def page_not_found(e):
 # ==============================
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    # app.run(debug=True)
+     app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5001)))
